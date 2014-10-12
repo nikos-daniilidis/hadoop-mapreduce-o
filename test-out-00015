@@ -1,0 +1,23 @@
+Expected Output for Student Times
+
+Below you will find the output expected for the Student Times exercise when using the test data set provided. The output of your code should include all of the rows below, aside from the columns headers, but the order of the rows may be switched around.
+
+Please note that the test data was modified very slightly on May 22, 2014, so please re-download the dataset if you have an older version.
+Student ID | 	Hour
+100000005 	1
+100000066 	1
+100000066 	5
+100002460 	12
+100003192 	8
+100003268 	15
+100004467 	12
+100004467 	20
+100004819 	4
+100005156 	17
+100007808 	12
+100008254 	22
+100010128 	14
+100012200 	5
+100019875 	5
+100020526 	14
+100071170 	12

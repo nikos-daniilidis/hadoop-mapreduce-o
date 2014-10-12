@@ -1,0 +1,31 @@
+Expected Output for Top Tags
+
+Below you will find the output expected for the Top Tags exercise when using the test data set provided. The output of your code should include all of the rows below, aside from the columns headers. The order of the rows does matter for this question. Tags that tie for the same number of counts can be switched with one another, but the list as a whole needs to show tags starting with the highest count and descending. 
+
+The first set of results is what your code should produce if you count tags from questions, answers, and comments. The second set shows what you should get if you only count tags from questions. Both methods will meet specifications for the Final Project. 
+
+Tags from questions, answers and comments:
+Tag 	Counts
+cs253 	12
+cs101 	12
+discussion 	5
+welcome 	3
+homework 	3
+issues 	3
+meta 	2
+nationalities 	2
+jobs 	2
+lessons 	2
+
+Tags from questions only:
+Tag 	Counts
+cs101 	8
+cs253 	5
+discussion 	5
+issues 	3
+welcome 	3
+homework 	2
+jobs 	2
+lessons 	2
+meta 	2
+nationalities 	2
