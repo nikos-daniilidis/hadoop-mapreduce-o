@@ -1,4 +1,4 @@
-## This is a repository with simple Hadoop/MapReduce routines 
+### This is a repository with simple Hadoop/MapReduce routines 
 
 All mappers and reducers are written in Python and use the Hadoop Python streaming API. 
 The code produced the expected results on the Cloudera-Udacity Virtual machine, distributed 
@@ -6,15 +6,14 @@ at the [Udacity course website](https://www.udacity.com/wiki/ud617#virtual-machi
 
 There is a corresponding blog post for a small subset of this work [here](http://nikosd.me/jekyll/update/2014/10/13/Map-Reduce:-21st-century-Lemmings.html) and [here](http://oligotropos.wordpress.com/2014/10/13/mapreduce-lemmings-in-the-21st-century/).
 
-Data
-----
+### Data
 
 The data on which the code runs is also available at the course website 
 ([access log]( http://content.udacity-data.com/courses/ud617/access_log.gz), 
 [purchases.txt]( http://content.udacity-data.com/courses/ud617/purchases.txt.gz),
 [udacity forum data](http://content.udacity-data.com/course/hadoop/forum_data.tar.gz))
 
-### 1. Access log
+#### 1. Access log
 
 This is the access log of webserver in Common Log Format:
 
@@ -34,7 +33,7 @@ Where:
     %>s is the status code that the server sends back to the client. You will see see mostly status codes 200 (OK - The request has succeeded), 304 (Not Modified) and 404 (Not Found). See more information on status codes in W3C.org
     %b is the size of the object returned to the client, in bytes. It will be "-" in case of status code 304.
 
-### 2. Purchase log
+#### 2. Purchase log
 
 This is a file containing information on purchases made in a number of stores. Each line in purchases.txt consists of tab delimited entries:
 
@@ -44,7 +43,7 @@ e.g.
  
 2012-01-01	09:00	San Jose	Men's Clothing	214.05	Amex
 
-### 3. Udacity forum data
+#### 3. Udacity forum data
 
 This is data from the udacity forum (similar to Stack Exchange format). 
 There are two files. Each line in `forum_node.tsv` has the following fields:
@@ -55,17 +54,14 @@ Each line in `forum_users.tsv` has the following fields:
 
 	id reputation gold silver bronze
 
-
-
-Code
-----
+### Code
 
 In what follows, the mapper and reducer functions are organized according to the type of operation they perform. 
 
 For each mapper and reducer, I am also specifying the input and output files as in:
 (`input file` -> `mapper.py`, `reducer.py` -> `output file`)
 
-### 1. Summarization patterns
+#### 1. Summarization patterns
 
 * Find the total sales amount for each store
 	(`purchases.txt` -> `mapper0.py`,`reducer0.py` -> `part-00000`)
@@ -86,7 +82,7 @@ For each mapper and reducer, I am also specifying the input and output files as 
 * Find the length of each question and the average length of the answers to that question
 	(`test_posts.tsv` -> `mapper13.py`, `reducer13.py` -> `test-out-00013` )
 
-### 2. Filtering patterns
+#### 2. Filtering patterns
 
 * Find all forum entries containing a single sentence in their body
 	(`forum_node.tsv` -> `mapper7.py` -> `part-00007`).
@@ -103,7 +99,7 @@ For each mapper and reducer, I am also specifying the input and output files as 
 * Find the top 10 tags ordered by the number of questions submitted under a tag
 	(`test_posts.tsv` -> `mapper16.py`, `reducer16.py` -> `test-out-00016`)
 
-### 3. Structural patterns
+#### 3. Structural patterns
 
 * Combine two data sets from two different input files.
 	(`forum_node.tsv`, `forum_users.tsv` -> `mapper12.py`, `reducer12.py` -> `part-00012`)
