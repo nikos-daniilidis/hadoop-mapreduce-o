@@ -1,8 +1,10 @@
-## This is a repository with simple Hadoop/MapReduce routines based on the Udacity course. 
+## This is a repository with simple Hadoop/MapReduce routines 
 
 All mappers and reducers are written in Python and use the Hadoop Python streaming API. 
 The code produced the expected results on the Cloudera-Udacity Virtual machine, distributed 
-at the [course website](https://www.udacity.com/wiki/ud617#virtual-machine). 
+at the [Udacity course website](https://www.udacity.com/wiki/ud617#virtual-machine). 
+
+There is a corresponding blog post for a small subset of this work [here](http://nikosd.me/jekyll/update/2014/10/13/Map-Reduce:-21st-century-Lemmings.html) and [here](http://oligotropos.wordpress.com/2014/10/13/mapreduce-lemmings-in-the-21st-century/).
 
 Data
 ----
